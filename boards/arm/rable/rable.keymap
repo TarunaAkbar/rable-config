@@ -38,14 +38,14 @@
         // | F7  |   |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         // | F8  |   |     |     |     |     |     |LEFT |DOWN |  UP |RIGHT|     |     |     |     |
         // | F9  |   |     |     |     |     |     |     |     |     |     |     |     |     |     |
-        // | F10 |   |     |     |                            RGB TOG                        |     |     | DEL |     |
+        // | F10 |   |     |     |                            RGB TOG                        |     |     |  RST   |  BOOT   |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
         &kp F6   &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
         &kp F7   &kp CAPS  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
         &kp F8   &trans  &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans            &trans              &trans  
         &kp F9   &trans  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
-        &kp F10  &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                       &trans    &trans   &trans   &trans
+        &kp F10  &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                       &trans    &trans   &reset   &bootloader
       >;
     };
   };
