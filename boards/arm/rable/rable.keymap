@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 //color remampping
-#define blue   &rgb_ug RGB_COLOR_HSB(300, 100, 100)
-#define red    &rgb_ug RGB_COLOR_HSB(200, 100, 100)
-#define green  &rgb_ug RGB_COLOR_HSB(15, 100, 100)
-#define purple &rgb_ug RGB_COLOR_HSB(175, 100, 100)
+#define blue   &rgb_ug RGB_COLOR_HSB(210, 100, 100)
+#define red    &rgb_ug RGB_COLOR_HSB(0, 100, 100)
+#define green  &rgb_ug RGB_COLOR_HSB(120, 100, 100)
+#define purple &rgb_ug RGB_COLOR_HSB(270, 100, 100)
 
 
 
@@ -24,18 +24,18 @@
     
     default_layer {
         // ----------------------------------------------------------------------------------------------------------
-        // | F1  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BSLH |  TILDE  |  DEL  |
-        // | F2  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   BSPC   | PG UP   |
-        // | F3  | CAPS  |  A  |  S(1)| D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    | PG DOWN |
-        // | F4  |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |   SHIFT  |  UP   | END     |
-        // | F5  |  CTL  |  WIN  |  ALT  |                SPACE MO(1)          |  MO(1)  |  LEFT  |  DOWN | RIGHT   |
+        // | F5  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BSLH |  TILDE  |  DEL  |
+        // | F1  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   BSPC   | PG UP   |
+        // | F2  | CAPS  |  A  |  S(1)| D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    | PG DOWN |
+        // | F3  |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |   SHIFT  |  UP   | END     |
+        // | F4  |  CTL  |  WIN  |  ALT  |                SPACE MO(1)          |  MO(1)  |  LEFT  |  DOWN | RIGHT   |
         // ----------------------------------------------------------------------------------------------------------
       bindings = <
-        &kp F1  &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp TILDE  &kp DEL
-        &kp F2  &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC         &kp PG_UP
-        &kp F3  &kp LCTRL  &kp A    &lt 1 S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                  &kp PG_DN
-        &kp F4  &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH                      &kp RSHFT   &kp UP     &kp END
-        &kp F5  &kp LCTRL  &kp LGUI &kp LALT                                  &lt 1 SPACE                                        &mo 1    &kp LEFT      &kp DOWN   &kp RIGHT
+        &kp F5  &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp TILDE  &kp DEL
+        &kp F1  &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC         &kp PG_UP
+        &kp F2  &kp LCTRL  &kp A    &lt 1 S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                  &kp PG_DN
+        &kp F3  &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH                      &kp RSHFT   &kp UP     &kp END
+        &kp F4  &kp LCTRL  &kp LGUI &kp LALT                                  &lt 1 SPACE                                        &mo 1    &kp LEFT      &kp DOWN   &kp RIGHT
       >;
     };
 
@@ -49,9 +49,9 @@
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
         &trans         &trans    &kp F1   &kp F2    &kp F3   &kp F4    &kp F5   &kp F6    &kp F7   &kp F8    &kp F9    &kp F10    &kp F11   &kp F12    &trans   &trans             blue      
-        &bt BT_CLR     &kp CAPS  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans    &trans     &trans    &trans         &trans                  red 
-        &bt BT_SEL 0   &trans    &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &trans     &trans            &trans                         green  
-        &bt BT_SEL 1   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans    &trans                       &trans      &rgb_ug RGB_BRI    purple   
+        &bt BT_CLR     &kp CAPS  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans    &trans     &kp UP    &trans         &trans                  red 
+        &bt BT_SEL 0   &trans    &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LEFT     &kp RIGHT            &trans                         green  
+        &bt BT_SEL 1   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans    &kp DOWN                       &trans      &rgb_ug RGB_BRI    purple   
         &bt BT_SEL 2   &trans    &trans   &trans                                   &rgb_ug RGB_TOG                                          &trans  &reset      &rgb_ug RGB_BRD    &bootloader
       >;
     };
